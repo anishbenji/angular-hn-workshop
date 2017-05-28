@@ -7,9 +7,6 @@ import { NgModule } from '@angular/core';
 /* App modules */
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { FeedsModule } from './feeds/feeds.module';
-import { ItemDetailsModule } from './item-details/item-details.module';
-import { UserModule } from './user/user.module';
 import { ServicesModule } from './shared/services/services.module';
 
 /* Root component */
@@ -23,9 +20,6 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    FeedsModule,
-    ItemDetailsModule,
-    UserModule,
     ServicesModule.forRoot()
   ],
   bootstrap: [AppComponent]
