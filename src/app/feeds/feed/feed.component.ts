@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 
 import { HackernewsApiService } from '../../shared/services/services.module';
 
+import { NewsItem } from '../../shared/models/news-item';
+
 @Component({
   selector: 'hn-feed',
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
-  items: any;
+  items: NewsItem[];
 
   constructor(
     private _hnApi: HackernewsApiService
@@ -17,7 +19,7 @@ export class FeedComponent implements OnInit {
   ngOnInit() {
     this._hnApi.fetchFeed('news', 1)
       .subscribe(
-        (items: any) => this.items = items,
+        (items: NewsItem[]) => this.items = items,
         error => console.log('Error fetching feed', error)
       );
   }
