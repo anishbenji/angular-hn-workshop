@@ -5,7 +5,7 @@
   <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
 </p>
 <p *ngIf="!hasUrl">
-  <a class="title" href="">
+  <a class="title" [routerLink]="['/item', item.id]">
     {{item.title}}
   </a>
 </p>
@@ -14,7 +14,7 @@
   <a href="">{{item.user}}</a>
   <span class="item-details">
     {{ item.time_ago }}
-    <a href="">
+    <a [routerLink]="['/item', item.id]">
       {{item.comments_count | comment }}
     </a>
   </span>
@@ -31,7 +31,7 @@
   </div>
   <div class="details">
     {{ item.time_ago }}
-    <a href="" class="comment-number"> •
+    <a [routerLink]="['/item', item.id]" class="comment-number"> •
       {{item.comments_count | comment }}
     </a>
   </div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FeedComponent } from './feeds/feed/feed.component';
+import { ItemDetailsComponent } from './item-details/item-details/item-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'news/1', pathMatch: 'full' },
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'show/:page', component: FeedComponent, data: { feedType: 'show' } },
   { path: 'ask/:page', component: FeedComponent, data: { feedType: 'ask' } },
   { path: 'jobs/:page', component: FeedComponent, data: { feedType: 'jobs' } },
+  { path: 'item/:id', component: ItemDetailsComponent },
   { path: '**', redirectTo: 'news/1' }
 ];
 
