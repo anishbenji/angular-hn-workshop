@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import { NewsItem } from '../models/news-item';
 import { ItemDetail } from '../models/item-detail';
 import { PollResult } from '../models/poll-result';
+import { User } from '../models/user';
 
 @Injectable()
 export class HackernewsApiService {
@@ -45,6 +46,12 @@ export class HackernewsApiService {
   fetchPollContent(id: number): Observable<PollResult> {
     return this._http
       .get(`${this.baseUrl}/item/${id}`)
+      .map(response => response.json());
+  }
+
+  fetchUser(id: string): Observable<User> {
+    return this._http
+      .get(`${this.baseUrl}/user/${id}`)
       .map(response => response.json());
   }
 
