@@ -1,6 +1,16 @@
 # AngularHn
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6. It is the repository of code used in my Angular Workshops given in May 2017. It is based on the excellent [Angular 2 Hackernews](https://houssein.me/angular2-hacker-news) tutorial by Houssein Djirdeh. The GitHub Repo for his code is [here](https://github.com/housseindjirdeh/angular2-hn).
+
+## Using this code
+
+Once you download this repo, open the folder in the command line. You can go to each step of the workshop directly by `git checkout step-#` where `#` is a step number between 1 and 24.
+
+You need to have Node 6.9.0 or later and the Angular CLI installed globally to use this code.
+
+To install all the required dependencies run `npm install` or `yarn` in the project folder.
+
+More information provided by the Angular CLI below.
 
 ## Development server
 
