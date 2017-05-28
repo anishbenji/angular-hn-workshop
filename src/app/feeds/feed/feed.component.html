@@ -1,11 +1,20 @@
 <main>
-  <ol>
-    <li class="post" *ngFor="let item of items; let i = index">
-      <hn-item class="item-block" [item]="item"></hn-item>
-    </li>
-  </ol>
-  <div class="nav">
-    <a href="" class="prev">< Prev</a>
-    <a href="" class="more">More ></a>
+  <div *ngIf="items; else loading">
+    <ol>
+      <li class="post" *ngFor="let item of items; let i = index">
+        <hn-item class="item-block" [item]="item"></hn-item>
+      </li>
+    </ol>
+    <div class="nav">
+      <a href="" class="prev">< Prev</a>
+      <a href="" class="more">More ></a>
+    </div>
   </div>
+  <ng-template #loading>
+    <div class="loading-section">
+      <div class="loader">
+        Loading...
+      </div>
+    </div>
+  </ng-template>
 </main>
