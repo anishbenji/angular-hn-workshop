@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 /* App modules */
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { FeedsModule } from './feeds/feeds.module';
 
 /* Root component */
 import { AppComponent } from './app.component';
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    FeedsModule
   ],
   bootstrap: [AppComponent]
 })
