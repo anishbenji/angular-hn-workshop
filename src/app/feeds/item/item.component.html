@@ -15,12 +15,7 @@
   <span class="item-details">
     {{ item.time_ago }}
     <a href="">
-      <span *ngIf="item.comments_count !== 0">
-        {{item.comments_count}}
-        <span *ngIf="item.comments_count === 1">comment</span>
-        <span *ngIf="item.comments_count > 1">comments</span>
-      </span>
-      <span *ngIf="item.comments_count === 0">discuss</span>
+      {{item.comments_count | comment }}
     </a>
   </span>
 </div>
@@ -37,12 +32,7 @@
   <div class="details">
     {{ item.time_ago }}
     <a href="" class="comment-number"> •
-      <span *ngIf="item.comments_count !== 0">
-        {{item.comments_count}}
-        <span *ngIf="item.comments_count === 1">comment</span>
-        <span *ngIf="item.comments_count > 1">comments</span>
-      </span>
-      <span *ngIf="item.comments_count === 0">discuss</span>
+      {{item.comments_count | comment }}
     </a>
   </div>
 </div>
