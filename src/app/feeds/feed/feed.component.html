@@ -1,7 +1,7 @@
 <main>
   <ol>
     <li class="post" *ngFor="let item of items; let i = index">
-      <hn-item class="item-block" [item]="{ id: i + 1 }"></hn-item>
+      <hn-item class="item-block" [item]="item"></hn-item>
     </li>
   </ol>
   <div class="nav">
