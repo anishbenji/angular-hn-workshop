@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { HackernewsApiService } from './hackernews-api.service';
 
-@NgModule()
+@NgModule({
+  imports: [
+    HttpModule
+  ]
+})
 /* For registering services with Angular in root module */
 export class ServicesModule {
   static forRoot() {
