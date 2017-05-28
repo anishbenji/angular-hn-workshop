@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { PipesModule } from '../shared/pipes/pipes.module';
 
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     PipesModule
   ],
   declarations: [
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    CommentComponent
   ],
   exports: [
     ItemDetailsComponent
